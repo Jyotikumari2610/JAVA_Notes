@@ -44,6 +44,7 @@ public class Recursion {
             return fibonacci(n-1)+fibonacci(n-2);
 
         }
+    
     //Binary search using recursion
     static int binarySearch(int arr[],int target,int start,int end){
         if(start>end){
