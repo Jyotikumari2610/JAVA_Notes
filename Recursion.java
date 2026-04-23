@@ -97,4 +97,45 @@ Find the last occurrence of an element in an array using recursion.
 Generate all subsets of a string using recursion.
 Solve the Tower of Hanoi problem using recursion.
 }
-   
+   public class main{
+    public static void main(String args[]){
+       // int n=78;
+       // nEveno(n);
+      // int as=CountDigit(348);
+      // System.out.println(as);
+      int ans=factorial(5);
+      System.out.println(ans);
+      //int f=fibonaci(6);
+      //System.out.println(f);
+    }
+    //Print all even numbers from 1 to N using recursion.
+    static void nEveno(int n){
+        if(n==0){
+            return;
+        }
+        nEveno(n-1);
+        if(n%2==0){
+            System.out.println(n+" ");
+        }
+    }
+    //Count the number of digits in a given number using recursion.
+    static int CountDigit(int n){
+        if(n==0){
+            return 0;
+        }
+        return 1 + CountDigit(n/10);
+    }
+    //Find the factorial of a number using recursion.
+    static int factorial(int n){
+        if(n==1 || n==0){
+            return 1;
+        }
+        return n*factorial(n-1);
+    }
+    static int fibonaci(int n){
+        if(n==1 || n==0){
+            return n;
+        }
+        return fibonaci(n-1)+fibonaci(n-2);
+    }
+}
