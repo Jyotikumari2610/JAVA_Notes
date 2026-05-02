@@ -139,3 +139,84 @@ Solve the Tower of Hanoi problem using recursion.
         return fibonaci(n-1)+fibonaci(n-2);
     }
 }
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        //NtoOne(5);
+        //oneTOn(5);
+        //Both(5);
+        //System.out.println(FibonacciS(7));
+        //System.out.println(Factorial(5));
+        //System.out.println(SumofN(8));
+        //System.out.println(sumofD(876));
+        //System.out.println(productofD(89));
+        //System.out.println(Reverse(897,0));
+        System.out.println(Palindrome(131,0));
+    }
+    static void NtoOne(int n){
+        if(n==0){
+            return;
+        }
+        System.out.println(n);
+        NtoOne(n-1);
+    }
+    static void oneTOn(int n){
+        if(n==0){
+            return;
+        }
+        oneTOn(n-1);
+        System.out.println(n);
+    }
+    static void Both(int n){
+        if(n==0){
+            return;
+        }
+        System.out.println(n);
+        Both(n-1);
+        System.out.println(n);
+    }
+    static int FibonacciS(int n){
+        if(n==1 || n==0){
+            return n;
+        }
+        return FibonacciS(n-1)+FibonacciS(n-2);
+    }
+    static int Factorial(int n){
+     if(n==1){
+         return n;
+     }
+     return n*Factorial(n-1);
+    }
+    static int SumofN(int n){
+        if(n==0){
+            return 0;
+        }
+        return n+SumofN(n-1);
+    }
+    static int sumofD(int n){
+        if(n==0){
+            return 0;
+        }
+        return (n%10)+sumofD(n/10);
+    }
+    static int productofD(int n){
+        if(n==0||n==1){
+            return 1;
+        }
+        return (n%10)*productofD(n/10);
+    }
+    static int Reverse(int n,int rev){
+        if(n==0){
+            return rev;
+        }
+        return Reverse(n/10,rev*10+n%10);
+    }
+    static boolean Palindrome(int n,int rev){
+        int original=n;
+        int z= Reverse(n/10,rev*10+n%10);
+        if(original==z){
+            return true;
+        }
+        return false;
+    }
+}
