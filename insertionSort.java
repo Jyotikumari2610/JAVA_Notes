@@ -7,7 +7,10 @@ public class insertionSort{
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
-        System.out.println(insertion_Sort(arr));
+        insertion_Sort(arr);
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
     }
     static void insertion_Sort(int arr[]){
         for(int i=1;i<arr.length;i++){
