@@ -48,7 +48,6 @@ public class oop1 {
 
     }
 }
-
 //create a class student which has 3 properties roll no, name and marks
 //for every single students
 public classs Student{
@@ -72,14 +71,12 @@ public classs Student{
         this.rno=15;
         this.name="Jyoti";
         this.marks=89.1f;
-
     }
     StudentS(){
         //this is how u call a constructor from another constructor
         //internally: new Student(13,"Default Men",90.1f);
         this(13,"Default Men",90.1f);   
     }
-
     //Student Arpit=new Student(17,"Arpit",90.8f);
     //here this will replaced with arpit
     Student(int rno, String name, float marks){
